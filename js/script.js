@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cocoPosition = coco.offsetLeft;
         const daviPosition = +window.getComputedStyle(davi).bottom.replace('px','');
 
-        if (cocoPosition <= 72 && cocoPosition > 0 && daviPosition < 80) {
+        if (cocoPosition <= 90 && cocoPosition > 0 && daviPosition < 90) {
             coco.style.animation = 'none';
             coco.style.left = `${cocoPosition}px`;
 
