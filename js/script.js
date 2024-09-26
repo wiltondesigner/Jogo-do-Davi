@@ -38,5 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }, 10);
 
+    // Adiciona suporte para teclado (desktop)
     document.addEventListener('keydown', jump);
+
+    // Adiciona suporte para toque (celulares/tablets)
+    document.addEventListener('touchstart', jump);
 });
