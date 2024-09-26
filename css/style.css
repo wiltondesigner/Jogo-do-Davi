@@ -111,3 +111,20 @@
         width: 400px; /* Ajustar as nuvens para telas muito pequenas */
     }
 }
+.reload {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.reload button {
+    width: 10%;
+    border: none;
+    background-color: #3f2871;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.93rem;
+    font-weight: 500;
+}
