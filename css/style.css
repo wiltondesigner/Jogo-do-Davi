@@ -17,7 +17,7 @@
 .coco {
     position: absolute;
     bottom: 0;
-    width: 80px;
+    width: 72px; /* Diminuir o coco em telas menores pode ajudar */
     
     animation: coco-animation 3s infinite linear;
 }
@@ -27,7 +27,6 @@
     position: absolute;
     bottom: 0;
     left: 5px;
-   
 }
 
 .jump {
@@ -36,8 +35,8 @@
 
 .clouds {
     position: absolute;
-    width: 600px;
-    animation: clouds-animation 5s infinite linear;
+    width: 700px;
+    animation: clouds-animation 10s infinite linear;
 }
 
 @keyframes coco-animation {
@@ -53,29 +52,62 @@
     0%{
         bottom: 0;
     }
-        40% {
-bottom: 180px;
-        }
-    
-     50% {
+    40% {
         bottom: 180px;
-        }
-     60%{
+    }
+    50% {
         bottom: 180px;
-     }
-        
+    }
+    60%{
+        bottom: 180px;
+    }
     100% {
         bottom: 0;
-        }
-        
-}   
-
-@keyframes clouds-animation { 
-    from { 
-        right: -550px; 
-    } 
-    to { 
-        right: 100%; 
     }
 }
 
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+/* Adicione media queries para ajustar em telas menores */
+@media (max-width: 768px) {
+    .cena {
+        height: 400px; /* Ajustar a altura da cena em telas menores */
+    }
+
+    .davi {
+        width: 80px; /* Diminuir o personagem em telas menores */
+    }
+
+    .coco {
+        width: 50px; /* Diminuir o tamanho do coco em telas menores */
+    }
+
+    .clouds {
+        width: 500px; /* Ajustar as nuvens */
+    }
+}
+
+@media (max-width: 480px) {
+    .cena {
+        height: 300px; /* Reduz ainda mais a altura em telas bem pequenas */
+    }
+
+    .davi {
+        width: 60px; /* Reduz ainda mais o personagem */
+    }
+
+    .coco {
+        width: 40px; /* Reduz ainda mais o tamanho do coco */
+    }
+
+    .clouds {
+        width: 400px; /* Ajustar as nuvens para telas muito pequenas */
+    }
+}
