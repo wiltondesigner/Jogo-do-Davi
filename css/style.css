@@ -30,7 +30,7 @@
 }
 
 .jump {
-    animation: jump 700ms ease-in-out;
+    animation: jump 800ms ease-in-out;
 }
 
 .clouds {
@@ -53,7 +53,7 @@
         bottom: 0;
     }
     50% {
-        bottom: 50vh; /* Altura do pulo adaptável */
+        bottom: 60vh; /* Altura do pulo adaptável */
     }
     100% {
         bottom: 0;
