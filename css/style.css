@@ -113,15 +113,15 @@
 }
 .reload {
     width: 100%;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
+    margin-top: 0.2rem;
+    margin-left: 0.5rem;
 }
 
 .reload button {
-    width: 10%;
+    width: 5%;
     border: none;
     background-color: #3f2871;
-    padding: 0.62rem;
+    padding: 0.4rem;
     border-radius: 5px;
     cursor: pointer;
     color: #fff;
