@@ -1,3 +1,7 @@
+function recarregarPagina() {
+    window.location.reload();
+  }
+
 document.addEventListener('DOMContentLoaded', () => {
     const jumpSound = new Audio('./sounds/jump.mp3');
     const gameOverSound = new Audio('./sounds/game-over.mp3');
@@ -38,7 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }, 10);
 
-    // Adiciona suporte para teclado (desktop)
+     
+      // Adiciona suporte para teclado (desktop)
     document.addEventListener('keydown', jump);
 
     // Adiciona suporte para toque (celulares/tablets)
