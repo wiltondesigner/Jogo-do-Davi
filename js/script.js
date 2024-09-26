@@ -29,7 +29,7 @@ function recarregarPagina() {
       const cocoPosition = coco.offsetLeft;
       const daviPosition = +window.getComputedStyle(davi).bottom.replace('px','');
   
-      if (cocoPosition <= 52 && cocoPosition > 0 && daviPosition < 90) {
+      if (cocoPosition <= 52 && cocoPosition > 0 && daviPosition < 70) {
           coco.style.animation = 'none';
           coco.style.left = `${cocoPosition}px`;
   
