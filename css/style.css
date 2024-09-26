@@ -17,7 +17,7 @@
 .coco {
     position: absolute;
     bottom: 0;
-    width: 10vw; /* Largura adaptável a 10% da largura da tela */
+    width: 8vw; /* Largura adaptável a 10% da largura da tela */
     
     animation: coco-animation 3s infinite linear;
 }
@@ -30,7 +30,7 @@
 }
 
 .jump {
-    animation: jump 800ms ease-in-out;
+    animation: jump 700ms ease-in-out;
 }
 
 .clouds {
@@ -53,7 +53,7 @@
         bottom: 0;
     }
     50% {
-        bottom: 60vh; /* Altura do pulo adaptável */
+        bottom: 40vh; /* Altura do pulo adaptável */
     }
     100% {
         bottom: 0;
