@@ -6,8 +6,8 @@
 
 .cena {
    width: 100%;
-   height: 500px;
-   border-bottom: 15px solid #02b96a;
+   height: 100vh; /* Ajusta a altura para ocupar 100% da altura da tela */
+   border-bottom: 5vh solid #02b96a; /* Adapte o tamanho da borda inferior */
    margin: 0 auto;
    position: relative;
    overflow: hidden;
@@ -17,17 +17,16 @@
 .coco {
     position: absolute;
     bottom: 0;
-    width: 80px;
+    width: 10vw; /* Largura adaptável a 10% da largura da tela */
     
     animation: coco-animation 3s infinite linear;
 }
 
 .davi {
-    width: 100px;
+    width: 15vw; /* Largura adaptável a 15% da largura da tela */
     position: absolute;
     bottom: 0;
-    left: 5px;
-   
+    left: 2vw; /* Margem adaptável */
 }
 
 .jump {
@@ -36,46 +35,53 @@
 
 .clouds {
     position: absolute;
-    width: 600px;
+    width: 80vw; /* Largura adaptável */
     animation: clouds-animation 5s infinite linear;
 }
 
 @keyframes coco-animation {
     from {
-        right: -80px;
+        right: -10vw; /* Começa fora da tela */
+    }
+    to {
+        right: 100%; /* Sai do lado direito da tela */
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 30vh; /* Altura do pulo adaptável */
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -80vw; /* Ajuste para a largura da tela */
     }
     to {
         right: 100%;
     }
 }
 
-@keyframes jump {
-    0%{
-        bottom: 0;
+/* Media Queries para ajustes finos em telas muito pequenas */
+@media (max-width: 600px) {
+    .davi {
+        width: 25vw; /* Davi será maior em telas menores */
     }
-        40% {
-bottom: 180px;
-        }
-    
-     50% {
-        bottom: 180px;
-        }
-     60%{
-        bottom: 180px;
-     }
-        
-    100% {
-        bottom: 0;
-        }
-        
-}   
 
-@keyframes clouds-animation { 
-    from { 
-        right: -550px; 
-    } 
-    to { 
-        right: 100%; 
+    .coco {
+        width: 15vw; /* Coco será maior em telas menores */
+    }
+
+    @keyframes jump {
+        50% {
+            bottom: 20vh; /* Reduz a altura do pulo em telas menores */
+        }
     }
 }
-
