@@ -4,38 +4,42 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Evitar barra de rolagem no jogo */
+}
+
 .cena {
-   width: 100%;
-   height: 500px;
-   border-bottom: 15px solid #02b96a;
-   margin: 0 auto;
-   position: relative;
-   overflow: hidden;
-   background: linear-gradient(#52dcff, #fafeff);
+    width: 100vw;  /* Largura da cena ajustada para preencher a tela */
+    height: 80vh;  /* Altura da cena ajustada */
+    border-bottom: 15px solid #02b96a;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#52dcff, #fafeff);
 }
 
 .coco {
     position: absolute;
     bottom: 0;
-    width: 72px; /* Diminuir o coco em telas menores pode ajudar */
-    
+    width: 8vw; /* Usa vw para ajuste em todas as telas */
     animation: coco-animation 3s infinite linear;
 }
 
 .davi {
-    width: 100px;
+    width: 12vw; /* Ajusta o tamanho do personagem conforme a tela */
     position: absolute;
     bottom: 0;
-    left: 5px;
+    left: 5%;
 }
 
 .jump {
-    animation: jump 500ms ease-in-out;
+    animation: jump 700ms ease-in-out;
 }
 
 .clouds {
     position: absolute;
-    width: 700px;
+    width: 50vw; /* Ajuste para nuvens se adaptar à tela */
     animation: clouds-animation 10s infinite linear;
 }
 
@@ -49,17 +53,17 @@
 }
 
 @keyframes jump {
-    0%{
+    0% {
         bottom: 0;
     }
     40% {
-        bottom: 180px;
+        bottom: 40vh;  /* Define a altura do pulo relativa à tela */
     }
     50% {
-        bottom: 180px;
+        bottom: 40vh;
     }
-    60%{
-        bottom: 180px;
+    60% {
+        bottom: 40vh;
     }
     100% {
         bottom: 0;
@@ -75,56 +79,69 @@
     }
 }
 
-/* Adicione media queries para ajustar em telas menores */
+/* Responsividade para telas menores que 768px (tablets e celulares grandes) */
 @media (max-width: 768px) {
     .cena {
-        height: 400px; /* Ajustar a altura da cena em telas menores */
+        height: 70vh;  /* Ajusta a altura da cena */
     }
 
     .davi {
-        width: 80px; /* Diminuir o personagem em telas menores */
+        width: 15vw;  /* Ajusta o tamanho do personagem */
     }
 
     .coco {
-        width: 50px; /* Diminuir o tamanho do coco em telas menores */
+        width: 12vw;  /* Ajusta o tamanho do coco */
     }
 
     .clouds {
-        width: 500px; /* Ajustar as nuvens */
+        width: 60vw;  /* Ajusta o tamanho das nuvens */
     }
 }
 
+/* Responsividade para telas menores que 480px (celulares pequenos) */
 @media (max-width: 480px) {
     .cena {
-        height: 300px; /* Reduz ainda mais a altura em telas bem pequenas */
+        height: 60vh;  /* Reduz ainda mais a altura da cena */
     }
 
     .davi {
-        width: 60px; /* Reduz ainda mais o personagem */
+        width: 20vw;  /* Ajusta o personagem para caber bem em telas pequenas */
     }
 
     .coco {
-        width: 40px; /* Reduz ainda mais o tamanho do coco */
+        width: 15vw;  /* Ajusta o tamanho do coco para telas pequenas */
     }
 
     .clouds {
-        width: 400px; /* Ajustar as nuvens para telas muito pequenas */
+        width: 70vw;  /* Ajusta as nuvens para telas menores */
     }
 }
+
 .reload {
     width: 100%;
-    margin-top: 0.2rem;
-    margin-left: 0.5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .reload button {
-    width: 5%;
+    width: 20%;
+    max-width: 150px; /* Limite para não ficar muito grande em telas maiores */
     border: none;
     background-color: #3f2871;
-    padding: 0.4rem;
+    padding: 0.8rem;
     border-radius: 5px;
     cursor: pointer;
     color: #fff;
-    font-size: 0.93rem;
+    font-size: 1rem;
     font-weight: 500;
+}
+
+/* Ajustar o botão de recarregar para telas muito pequenas */
+@media (max-width: 480px) {
+    .reload button {
+        width: 40%;
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
 }
