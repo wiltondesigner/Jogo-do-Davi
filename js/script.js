@@ -44,7 +44,7 @@ const loop = setInterval(() => {
     const cocoPosition = coco.offsetLeft;
     const daviPosition = +window.getComputedStyle(davi).bottom.replace('px','');
 
-    if (cocoPosition <= 52 && cocoPosition > 0 && daviPosition < 70) {
+    if (cocoPosition <= 80 && cocoPosition > 0 && daviPosition < 50) {
         coco.style.animation = 'none';
         coco.style.left = `${cocoPosition}px`;
 
