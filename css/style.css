@@ -57,7 +57,7 @@ body {
         bottom: 0;
     }
     20% {
-        bottom: 30vh;  /* Define a altura do pulo relativa à tela */
+        bottom: 20vh;  /* Define a altura do pulo relativa à tela */
     
     }
     40% {
