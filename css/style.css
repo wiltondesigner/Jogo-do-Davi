@@ -56,6 +56,10 @@ body {
     0% {
         bottom: 0;
     }
+    20% {
+        bottom: 30vh;  /* Define a altura do pulo relativa à tela */
+    
+    }
     40% {
         bottom: 40vh;  /* Define a altura do pulo relativa à tela */
     }
@@ -65,10 +69,14 @@ body {
     60% {
         bottom: 40vh;
     }
+    80% {
+        bottom: 20vh;
+    }
     100% {
         bottom: 0;
     }
 }
+
 
 @keyframes clouds-animation {
     from {
